@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Temperature_converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Celcius" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8GC-Nn-vt6">
+                                <rect key="frame" x="127" y="331" width="160" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="4Be-K8-4T1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MS6-JK-PGf">
+                                <rect key="frame" x="178.5" y="439" width="57" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXa-bU-6UF">
+                                <rect key="frame" x="157.5" y="385" width="99" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert to F"/>
+                                <connections>
+                                    <action selector="convertClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iLD-SE-TdJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 conversions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wu-FX-6Fd">
+                                <rect key="frame" x="0.0" y="52" width="120" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="HtW-gn-sCP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="8GC-Nn-vt6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="42X-4I-xhy"/>
+                            <constraint firstItem="8Wu-FX-6Fd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="73a-Q6-zK9"/>
+                            <constraint firstItem="8GC-Nn-vt6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="7sJ-Fa-XoZ"/>
+                            <constraint firstItem="MS6-JK-PGf" firstAttribute="top" secondItem="kXa-bU-6UF" secondAttribute="bottom" constant="20" id="Vse-ej-cH6"/>
+                            <constraint firstItem="kXa-bU-6UF" firstAttribute="top" secondItem="8GC-Nn-vt6" secondAttribute="bottom" constant="20" id="i2e-U3-P64"/>
+                            <constraint firstItem="8Wu-FX-6Fd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="iBH-3R-u4i"/>
+                            <constraint firstItem="MS6-JK-PGf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lqJ-kk-yFS"/>
+                            <constraint firstItem="kXa-bU-6UF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wPb-X0-sWr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="conversionLabel" destination="8Wu-FX-6Fd" id="lYq-tY-vKU"/>
+                        <outlet property="resultLabel" destination="MS6-JK-PGf" id="neM-kc-LuA"/>
+                        <outlet property="tempEntry" destination="8GC-Nn-vt6" id="MzG-Ec-0rM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
